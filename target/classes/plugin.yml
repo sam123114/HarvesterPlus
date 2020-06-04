@@ -1,0 +1,5 @@
+main: ca.wartog.harvesterplus.Main
+name: HarvesterPlus
+version: 0.0.1-SNAPSHOT
+author: WaRToG
+api-version: 1.15
