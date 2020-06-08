@@ -1,8 +1,10 @@
 package ca.wartog.harvesterplus;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import ca.wartog.harvesterplus.commands.HarvesterplusCommand;
+import ca.wartog.harvesterplus.events.FertilizingEvent;
 
 public class Main extends JavaPlugin{
 	
@@ -17,6 +19,9 @@ public class Main extends JavaPlugin{
 		
 		//Init commands
 		getCommand("harvesterplus").setExecutor(new HarvesterplusCommand());
+		
+		//Init listeners
+		Bukkit.getPluginManager().registerEvents(new FertilizingEvent(), this);
 	}
 
 	
