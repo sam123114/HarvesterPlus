@@ -1,0 +1,20 @@
+#This is the default configuration file for the HarvesterPlus plugin by WaRToG
+
+addon-crops-list:
+  "DEAD_BRAIN_CORAL":
+    is-waterlogged: true
+    spawn-rate: 4
+    drops:
+      "MAIS":
+        type: "CONSUMABLE"
+        amount: 3
+  "DEAD_BUBBLE_CORAL_FAN":
+    is-waterlogged: true
+    spawn-rate: 4
+    drops:
+      "PATATES":
+        type: "CONSUMABLE"
+        amount: 1
+      "CARROTE":
+        type: "CONSUMABLE"
+        amount: 1
