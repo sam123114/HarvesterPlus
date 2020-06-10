@@ -23,6 +23,13 @@ public class Main extends JavaPlugin{
 		//Init listeners
 		Bukkit.getPluginManager().registerEvents(new FertilizingEvent(), this);
 	}
+	
+	@Override
+	public void onDisable() {
+		super.onDisable();
+		instance = null;
+		//saveConfig();
+	}
 
 	
 	public static Main getInstance() {
