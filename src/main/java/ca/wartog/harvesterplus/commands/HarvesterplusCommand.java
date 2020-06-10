@@ -20,7 +20,7 @@ public class HarvesterplusCommand implements CommandExecutor{
 			return true;
 		}
 		else {
-			if(args[0].equals("reload") && args.length > 1) {
+			if(args[0].equals("reload") && args.length == 1) {
 				main.reloadConfig();
 				p.sendMessage("§aConfig reloaded");
 			}
@@ -34,10 +34,10 @@ public class HarvesterplusCommand implements CommandExecutor{
 	}
 	
 	private void displayMenu(Player p) {
-		p.sendMessage("§8-=-=-=-=-[§HarvesterPlus§8]-=-=-=-=-");
+		p.sendMessage("§8-=-=-=-=-[§aHarvesterPlus§8]-=-=-=-=-");
 		p.sendMessage("");
-		p.sendMessage("§e /ap §f- §7Command list");
-		p.sendMessage("§e /ap reload §f- §7Reload the config file");
+		p.sendMessage("§e /hp §f- §7Command list");
+		p.sendMessage("§e /hp reload §f- §7Reload the config file");
 		p.sendMessage("");
 		p.sendMessage("§8-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
 	}

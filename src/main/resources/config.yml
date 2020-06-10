@@ -1,1 +1,9 @@
 #This is the configuration file for the HarvesterPlus plugin by WaRToG
+
+addon-crops-list:
+  "BRAIN_CORAL":
+    is-waterlogged: true
+    spawn-rate: 4
+  "BUBBLE_CORAL_FAN":
+    is-waterlogged: true
+    spawn-rate: 4
