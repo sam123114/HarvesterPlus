@@ -1,8 +1,9 @@
 main: ca.wartog.harvesterplus.Main
 name: HarvesterPlus
-version: 0.0.1
+version: 1.0.0
 author: WaRToG
 api-version: 1.15
+depend: [MMOItems]
 commands:
   harvesterplus:
     description: Display help for HarvesterPlus!

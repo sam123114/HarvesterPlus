@@ -5,14 +5,19 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import ca.wartog.harvesterplus.commands.HarvesterplusCommand;
 import ca.wartog.harvesterplus.events.FertilizingEvent;
+import ca.wartog.harvesterplus.events.HarvestingEvent;
+import net.Indyuce.mmoitems.MMOItems;
+import net.Indyuce.mmoitems.manager.ItemManager;
 
 public class Main extends JavaPlugin{
 	
+	public ItemManager itemManager;
 	public static Main instance;
 	
 	@Override
 	public void onEnable() {
 		instance = this;
+		itemManager = MMOItems.plugin.getItems();
 		
 		//Init config
 		saveDefaultConfig();
@@ -22,15 +27,8 @@ public class Main extends JavaPlugin{
 		
 		//Init listeners
 		Bukkit.getPluginManager().registerEvents(new FertilizingEvent(), this);
+		Bukkit.getPluginManager().registerEvents(new HarvestingEvent(), this);
 	}
-	
-	@Override
-	public void onDisable() {
-		super.onDisable();
-		instance = null;
-		//saveConfig();
-	}
-
 	
 	public static Main getInstance() {
 		return instance;

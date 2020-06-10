@@ -35,8 +35,8 @@ public class FertilizingEvent implements Listener{
 		    for (int x = -RADIUS; x <= RADIUS; x++) {
 		    	for (int z = -RADIUS; z <= RADIUS; z++) {
 		    		toHandle =  block.getWorld().getHighestBlockAt(block.getX() + x, block.getZ() + z);
-		            if (toHandle.getRelative(BlockFace.DOWN).getType() == Material.GRASS_BLOCK) { // Block beneath is grass
-		            	if (block.getLocation().distanceSquared(toHandle.getLocation()) <= RADIUS_squared) { // Block is in RADIUS
+		            if (toHandle.getType().equals(Material.AIR) && toHandle.getRelative(BlockFace.DOWN).getType() == Material.GRASS_BLOCK) {
+		            	if (block.getLocation().distanceSquared(toHandle.getLocation()) <= RADIUS_squared) {
 		            		for(String blockType : config.getConfigurationSection("addon-crops-list").getKeys(false)) {
 		            			setBlockType(toHandle, blockType, config.getBoolean("addon-crops-list." + blockType + ".is-waterlogged"), config.getInt("addon-crops-list." + blockType + ".spawn-rate"), rnd);
 		            		}
